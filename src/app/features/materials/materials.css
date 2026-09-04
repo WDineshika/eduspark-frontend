@@ -1,0 +1,302 @@
+:host{
+
+    display:block;
+    width:100%;
+
+}
+
+/* ===========================
+        PAGE
+=========================== */
+
+.materials-page{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:120px 40px 80px;
+
+}
+
+/* ===========================
+        HEADER
+=========================== */
+
+.page-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.page-header h1{
+
+    font-size:3.2rem;
+
+    color:#1e293b;
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+.page-header p{
+
+    color:#64748b;
+
+    font-size:1.1rem;
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+        GRID
+=========================== */
+
+.materials-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:30px;
+
+}
+
+/* ===========================
+        CARD
+=========================== */
+
+.material-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    border:1px solid #edf2f7;
+
+    transition:.35s;
+
+}
+
+.material-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.18);
+
+}
+
+/* ===========================
+        TOP
+=========================== */
+
+.card-top{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+}
+
+.pdf-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    background:#eef4ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    flex-shrink:0;
+
+}
+
+.card-top h2{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+/* ===========================
+        BADGES
+=========================== */
+
+.badge-row{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.subject{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.category{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+        DESCRIPTION
+=========================== */
+
+.description{
+
+    margin:25px 0;
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    min-height:80px;
+
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+.card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:20px;
+
+}
+
+.size{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+.card-footer button{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.card-footer button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+        RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.materials-page{
+
+    padding:100px 20px 60px;
+
+}
+
+.page-header h1{
+
+    font-size:2.4rem;
+
+}
+
+.materials-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.card-footer{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    align-items:stretch;
+
+}
+
+.card-footer button{
+
+    width:100%;
+
+}
+
+}

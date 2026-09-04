@@ -1,0 +1,15 @@
+:host{
+    display:block;
+    width:100%;
+    overflow-x:hidden;
+    background:#ffffff;
+}
+
+app-hero,
+app-feature-bar,
+app-subjects,
+app-why-eduspark,
+app-cta{
+    display:block;
+    width:100%;
+}

@@ -1,0 +1,79 @@
+<section class="materials-page">
+
+    <!-- =========================
+            PAGE HEADER
+    ========================== -->
+
+    <div class="page-header">
+
+        <h1>Study Materials</h1>
+
+        <p>
+            Browse premium study materials, notes, worksheets,
+            revision guides and past papers.
+        </p>
+
+    </div>
+
+    <!-- =========================
+            MATERIALS GRID
+    ========================== -->
+
+    <div class="materials-grid">
+
+        <div class="material-card"
+             *ngFor="let material of materials">
+
+            <div class="card-top">
+
+                <div class="pdf-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h2>{{ material.title }}</h2>
+
+                    <div class="badge-row">
+
+                        <span class="subject">
+                            {{ material.subject }}
+                        </span>
+
+                        <span class="category">
+                            {{ material.category }}
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="description">
+
+                {{ material.description }}
+
+            </p>
+
+            <div class="card-footer">
+
+                <span class="size">
+
+                    {{ material.fileSize / 1024 | number:'1.0-0' }} KB
+
+                </span>
+
+                <button (click)="download(material)">
+
+                    Download PDF
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

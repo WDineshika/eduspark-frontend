@@ -1,0 +1,229 @@
+:host{
+    display:block;
+}
+
+/* ========================= */
+
+.why-eduspark{
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/* ========================= */
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/* ========================= */
+
+.why-left h2{
+
+    font-size:48px;
+
+    color:#0F172A;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.why-left>p{
+
+    color:#64748B;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* ========================= */
+
+.features{
+
+    display:grid;
+
+    gap:25px;
+
+}
+
+.feature-item{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    background:white;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.feature-item:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 20px 40px rgba(79,70,229,.12);
+
+}
+
+.feature-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    background:#EEF2FF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.feature-item h4{
+
+    margin-bottom:8px;
+
+    color:#0F172A;
+
+    font-size:20px;
+
+}
+
+.feature-item p{
+
+    color:#64748B;
+
+    line-height:1.6;
+
+}
+
+/* ========================= */
+
+.why-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ========================= */
+
+.stats-card{
+
+    background:linear-gradient(135deg,#4F46E5,#3730A3);
+
+    color:white;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    box-shadow:0 20px 40px rgba(79,70,229,.25);
+
+    transition:.35s;
+
+}
+
+.stats-card:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+}
+
+.stats-card h1{
+
+    font-size:56px;
+
+    margin-bottom:10px;
+
+    font-weight:800;
+
+}
+
+.stats-card span{
+
+    font-size:18px;
+
+    opacity:.95;
+
+}
+
+/* ========================= */
+
+@media(max-width:900px){
+
+.why-eduspark{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+}
+
+.why-left{
+
+    text-align:center;
+
+}
+
+.feature-item{
+
+    text-align:left;
+
+}
+
+}

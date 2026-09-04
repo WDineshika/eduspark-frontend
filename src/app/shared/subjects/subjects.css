@@ -1,0 +1,291 @@
+/* Layout Stage Setup */
+.subjects-section {
+    padding: 6rem 5% 8rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    background: radial-gradient(circle at center, #f8fafc 0%, #e2e8f0 100%);
+    overflow: hidden;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.section-header h2 {
+    font-size: 2.75rem;
+    color: #1e293b;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 6rem;
+}
+
+/* 3D Peacock Stage Environment */
+.peacock-display-stage {
+    position: relative;
+    height: 550px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    perspective: 1600px;
+}
+
+/* Center Peacock Body */
+.peacock-center-mascot {
+    position: absolute;
+    bottom: -10px;
+    z-index: 50;
+    pointer-events: none;
+    transform-origin: bottom center;
+}
+
+.mascot-body {
+    font-size: 7.5rem;
+    filter: drop-shadow(0 15px 25px rgba(15, 23, 42, 0.25));
+}
+
+/* Base Feather Card Structure */
+.feather-card {
+    position: absolute;
+    bottom: 40px;
+    width: 210px;
+    height: 420px;
+    transform-origin: bottom center;
+    border-radius: 120px 120px 40px 40px;
+    box-sizing: border-box;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+    transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.4s ease, filter 0.4s ease;
+    z-index: 5;
+    
+    /* Fly-in Flight Animation Trigger */
+    animation: flightEntrance 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Decorative Gold Edges & Fine Details mimicking peacock.jpg */
+.feather-card::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 116px 116px 36px 36px;
+    border: 1px dashed rgba(217, 119, 6, 0.3);
+    pointer-events: none;
+}
+
+.feather-stem {
+    position: absolute;
+    bottom: -30px;
+    width: 4px;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(217, 119, 6, 0.4), transparent);
+    z-index: -1;
+}
+
+/* Floating Inner Glassmorphism UI Layout */
+.glass-ui-box {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 100%;
+    border-radius: 40px;
+    padding: 1.5rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* Subject Badges & Text styling */
+.subject-badge-icon {
+    font-size: 2.25rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: #f1f5f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    margin-bottom: 0.75rem;
+}
+
+.icon-purple { background: #f3e8ff; }
+.icon-green { background: #dcfce7; }
+.icon-pink { background: #fce7f3; }
+.icon-blue { background: #e0f2fe; }
+
+.feather-card h3 {
+    font-size: 1.2rem;
+    color: #0f172a;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+}
+
+/* Resource Anchor Lists */
+.resource-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.link-item {
+    font-size: 0.85rem;
+    color: #4338ca;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.45rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    transition: all 0.2s;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.link-item:hover {
+    background: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+}
+
+/* Fine-tuned Button Layout */
+.browse-action-btn {
+    width: 85%;
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.2s;
+}
+
+.browse-action-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    border-color: #0f172a;
+}
+
+/* Feather-Specific Color Palettes & Spatial Coordinates */
+.feather-math {
+    background: linear-gradient(180deg, #115e59 0%, #ccfbf1 100%);
+    --rot: -52deg;
+    --tx: -290px;
+    --fly-from-x: -800px;
+    --fly-from-y: 200px;
+    animation-delay: 0.1s;
+}
+.feather-math h3, .feather-math .link-item { color: #115e59; }
+
+.feather-physics {
+    background: linear-gradient(180deg, #f8fafc 0%, #e0e7ff 100%);
+    --rot: -26deg;
+    --tx: -145px;
+    --fly-from-x: -400px;
+    --fly-from-y: -600px;
+    animation-delay: 0.25s;
+}
+
+.feather-chemistry {
+    background: linear-gradient(180deg, #f8fafc 0%, #dcfce7 100%);
+    --rot: 0deg;
+    --tx: 0px;
+    --fly-from-x: 0px;
+    --fly-from-y: -800px;
+    animation-delay: 0.4s;
+}
+
+.feather-biology {
+    background: linear-gradient(180deg, #f8fafc 0%, #f3e8ff 100%);
+    --rot: 26deg;
+    --tx: 145px;
+    --fly-from-x: 400px;
+    --fly-from-y: -600px;
+    animation-delay: 0.55s;
+}
+
+.feather-ict {
+    background: linear-gradient(180deg, #f8fafc 0%, #e0f2fe 100%);
+    --rot: 52deg;
+    --tx: 290px;
+    --fly-from-x: 800px;
+    --fly-from-y: 200px;
+    animation-delay: 0.7s;
+}
+
+/* 3D Realistic Flight Entry Sequence Keyframe */
+@keyframes flightEntrance {
+    0% {
+        opacity: 0;
+        /* Start scattered widely in 3D space with high rotations */
+        transform: translate3d(var(--fly-from-x), var(--fly-from-y), -600px) rotate(-140deg) scale(0.3);
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        /* Swoop down smoothly into the final stacked fan layout */
+        transform: translate3d(var(--tx), 0, 0) rotate(var(--rot));
+    }
+}
+
+/* Interactive Hover Mechanics: Brings individual elements close to the viewport */
+.feather-card:hover {
+    z-index: 60;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.18);
+    /* Pulls outward horizontally and z-depth axis toward user */
+    transform: translate3d(calc(var(--tx) * 1.08), -45px, 120px) rotate(calc(var(--rot) * 0.7)) scale(1.04);
+}
+
+/* Make other feathers dim down slightly when one feather is hovered */
+.peacock-display-stage:has(.feather-card:hover) .feather-card:not(:hover) {
+    filter: brightness(0.92) blur(1px);
+    opacity: 0.85;
+}
+
+/* Mobile & Tablet Adaptation */
+@media (max-width: 968px) {
+    .peacock-display-stage {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        perspective: none;
+    }
+    .peacock-center-mascot { display: none; }
+    .feather-card {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        transform: none !important;
+        animation: none;
+        border-radius: 32px;
+    }
+    .feather-stem { display: none; }
+    .feather-card:hover {
+        transform: translateY(-8px) !important;
+    }
+    .peacock-display-stage:has(.feather-card:hover) .feather-card:not(:hover) {
+        filter: none;
+        opacity: 1;
+    }
+}

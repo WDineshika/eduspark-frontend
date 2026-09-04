@@ -1,0 +1,227 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+:host{
+    display:block;
+}
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    height:80px;
+
+    padding:0 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    z-index:1000;
+
+    box-sizing:border-box;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.logo-circle{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+
+    transition:.3s;
+
+}
+
+.logo-circle:hover{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.brand{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.brand h2{
+
+    margin:0;
+
+    color:#2563eb;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.brand span{
+
+    color:#64748b;
+
+    font-size:12px;
+
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#334155;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#2563eb;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:#2563eb;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.active{
+
+    color:#2563eb !important;
+
+}
+
+.active::after{
+
+    width:100% !important;
+
+}
+
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    padding:0 20px;
+
+}
+
+.nav-links{
+
+    display:none;
+
+}
+
+.brand h2{
+
+    font-size:24px;
+
+}
+
+.brand span{
+
+    display:none;
+
+}
+
+
+}

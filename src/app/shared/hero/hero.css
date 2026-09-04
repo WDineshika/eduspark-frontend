@@ -1,0 +1,325 @@
+:host{
+    display:block;
+    width:100%;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:80px 40px;
+
+    min-height:calc(100vh - 80px);
+
+}
+
+/* Background circles */
+
+.circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    opacity:.18;
+
+    z-index:-1;
+
+}
+
+.circle-one{
+
+    width:320px;
+
+    height:320px;
+
+    background:#60a5fa;
+
+    top:-80px;
+
+    left:-80px;
+
+}
+
+.circle-two{
+
+    width:260px;
+
+    height:260px;
+
+    background:#8b5cf6;
+
+    right:-80px;
+
+    bottom:40px;
+
+}
+
+/* ================= LEFT ================= */
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero-left h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    color:#1e293b;
+
+    margin-bottom:25px;
+
+}
+
+.hero-left h1 span{
+
+    color:#2563eb;
+
+}
+
+.hero-left p{
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    color:#64748b;
+
+    margin-bottom:35px;
+
+    max-width:550px;
+
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.primary-btn{
+
+    padding:15px 32px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.secondary-btn{
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    border:2px solid #2563eb;
+
+    background:white;
+
+    color:#2563eb;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ================= IMAGE ================= */
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    max-width:560px;
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:992px){
+
+.hero{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    min-height:auto;
+
+}
+
+.hero-left{
+
+    width:100%;
+
+}
+
+.hero-left p{
+
+    margin:auto;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-left h1{
+
+    font-size:3rem;
+
+}
+
+.hero-image{
+
+    max-width:420px;
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:576px){
+
+.hero{
+
+    padding:40px 20px;
+
+    gap:35px;
+
+}
+
+.hero-left h1{
+
+    font-size:2.3rem;
+
+}
+
+.hero-left p{
+
+    font-size:1rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    width:100%;
+
+    max-width:280px;
+
+}
+
+.hero-image{
+
+    max-width:300px;
+
+}
+
+.tag{
+
+    font-size:.85rem;
+
+}
+
+}
