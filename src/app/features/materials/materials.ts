@@ -43,9 +43,9 @@ export class Materials implements OnInit {
     });
   }
 
-  download(material: any) {
+   download(material: any) {
     window.open(
-      'http://localhost:8080' + material.fileUrl,
+      'https://eduspark-backend-9f5a6.containers.snapdeploy.app' + material.fileUrl,
       '_blank'
     );
   }
