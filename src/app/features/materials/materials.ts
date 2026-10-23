@@ -1,5 +1,6 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core'; // 1. Import ChangeDetectorRef
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 import { StudyMaterial } from '../../models/study-material';
 import { StudyMaterialService } from '../../services/study-material.service';
@@ -14,14 +15,19 @@ import { StudyMaterialService } from '../../services/study-material.service';
 export class Materials implements OnInit {
 
   materials: StudyMaterial[] = [];
+  subject: string = '';
 
-  // 2. Inject it into your constructor
   constructor(
     private materialService: StudyMaterialService,
-    private cdr: ChangeDetectorRef 
+    private cdr: ChangeDetectorRef,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.subject = this.route.snapshot.paramMap.get('subject') || '';
+
+    console.log('Selected subject:', this.subject);
+
     this.loadMaterials();
   }
 
@@ -29,7 +35,7 @@ export class Materials implements OnInit {
     this.materialService.getAllMaterials().subscribe({
       next: (data) => {
         this.materials = data;
-        this.cdr.detectChanges(); // 3. Force Angular to detect changes and render the cards immediately
+        this.cdr.detectChanges();
       },
       error: (err) => {
         console.error('Error loading materials', err);

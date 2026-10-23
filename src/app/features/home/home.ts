@@ -1,4 +1,6 @@
+
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { Hero } from '../../shared/hero/hero';
 import { FeatureBar } from '../../shared/feature-bar/feature-bar';
@@ -13,7 +15,8 @@ import { Cta } from '../../shared/cta/cta';
     Hero,
     Subjects,
     WhyEduspark,
-    Cta
+    Cta,
+    RouterLink
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'
