@@ -9,7 +9,7 @@ import { StudyMaterial } from '../models/study-material';
 })
 export class StudyMaterialService {
 
-  private apiUrl = 'http://localhost:8080/api/materials';
+ private apiUrl = 'https://eduspark-backend-9f5a6.containers.snapdeploy.app/api/materials';
 
   constructor(private http: HttpClient) { }
 
